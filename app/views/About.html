@@ -28,7 +28,13 @@
    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
 </head>
 <body>
-    <div ng-app="ungdungAngularJS" ng-controller="HomepageController" >
+<script>
+var ungdungAngularjs = angular.module("ungdungAngularJS", []);
+
+
+      
+</script>
+    <div ng-app="ungdungAngularJS" >
 	<div ng-include="'pages/Header.html'">  </div>
     <div ng-include="'pages/MainMenu.html'">  </div>
     <div style="padding: 3cm 3cm 3cm 3cm;">
@@ -43,25 +49,7 @@
     <div ng-include="'pages/Footer.html'">  </div>
 
     </div>
-<script>
-var ungdungAngularjs = angular.module("ungdungAngularJS", []);
 
-ungdungAngularjs.controller("HomepageController",function($scope){
-$scope.listsanpham=[{
-    id:1,
-    ten:"5cm tren giay",
-    gia:20000,
-    img : "5_centimet_tren_giay.jpg"},
-    {
-    id:2,
-    ten:"10cm tren giay",
-    gia:50000,
-    img : "5_centimet_tren_giay.jpg"}];
-
-
-});
-      
-</script>
 
 <!-- Latest jQuery form server -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
