@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var math = require('mathjs');
-var model = require('../app/models/mess.js');
+var model = require('../app/models/home.js');
 var crypto = require('crypto');
 var bodyParser = require("body-parser");
 var express = require('express');
