@@ -1,8 +1,6 @@
 var mongoose = require('mongoose');
 var model = require('../app/models/user.js');
 
-
-var hash = require('../helpers/hash');
 var crypto = require('crypto');
 var bodyParser = require("body-parser");
 var express = require('express');
