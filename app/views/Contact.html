@@ -10,6 +10,7 @@
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="initial-scale=1.0">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="Content/css/bootstrap.min.css" type='text/css'>
 
@@ -26,20 +27,30 @@
     <script src="script.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+   <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 10.814198, lng: 106.714807},
+          zoom: 15
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYl2TcuFCa73vr1YxBWhWjwaumYeBn8Rk&callback=initMap" async defer type="text/javascript"></script>
 </head>
 <body>
-    <div ng-app="ungdungAngularJS" ng-controller="HomepageController" >
+    <div ng-app="ungdungAngularJS"  >
 	<div ng-include="'pages/Header.html'">  </div>
     <div ng-include="'pages/MainMenu.html'">  </div>
     <div style="padding: 3cm 3cm 3cm 3cm;">
     <h2> Liên hệ </h2>
     <p> Nhà hàng 5 Star </p>
-    <p> Địa chỉ : số 123 đường 5 Quận 5 TP HCM </p>
+    <p> Địa chỉ : số 123 đường 5 Quận 5 TP HCM </p><br/>
+    <div id="map" style="width: 1000px; height: 500px;">
+    </div>
     <p> SĐT : 090000009 </p>
     <p> Email liên lạc : 090090090@gmail.com </p>
     </div>
-
-
 
 
 
@@ -49,22 +60,10 @@
 <script>
 var ungdungAngularjs = angular.module("ungdungAngularJS", []);
 
-ungdungAngularjs.controller("HomepageController",function($scope){
-$scope.listsanpham=[{
-    id:1,
-    ten:"5cm tren giay",
-    gia:20000,
-    img : "5_centimet_tren_giay.jpg"},
-    {
-    id:2,
-    ten:"10cm tren giay",
-    gia:50000,
-    img : "5_centimet_tren_giay.jpg"}];
 
-
-});
       
 </script>
+
 
 <!-- Latest jQuery form server -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
