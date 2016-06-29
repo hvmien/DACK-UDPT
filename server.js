@@ -27,8 +27,6 @@ mongoose.connect('mongodb://localhost', function(err){
 	app.engine('ect', ectRenderer.render);
 
 
-	
-
 	app.use(express.static(__dirname + '/app'));
 
 	
