@@ -106,16 +106,14 @@
             <div class="col-md-8">
                 <div class="product-content-right">
                     <div class="woocommerce">
-                    
+                    <h2 style="padding-left: 3cm"> Chi tiết mua hàng </h2>
                     <table cellspacing="0" class="shop_table cart">
                                 <thead>
                                     <tr>
-                                        <th class="product-remove">&nbsp;</th>
                                         <th class="product-thumbnail">&nbsp;</th>
                                         <th class="product-name">Sản phẩm</th>
                                         <th class="product-price">Giá</th>
                                         <th class="product-quantity">Số lượng</th>
-                                        <th class="product-tab">&nbsp;</th>
                                     </tr>
                                 </thead>
                                
@@ -123,10 +121,6 @@
                               
 
                                      <tr class="cart_item" ng-repeat="sanpham in listsanpham">
-                                            <td class="product-remove">
-                                                <button type = "button" onclick="xoaSP()">XoaSP </button>
-
-                                            </td>
                                             <td class="product-thumbnail">
                                                 <a href="DetailSP?qID={{sanpham.id}}"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="Content/img/{{sanpham.img}}"></a>
                                             </td>
@@ -148,18 +142,12 @@
 
                                                     </div>
                                                 </td>
-                                            <td class="product-tab">
-        
-                                                   <a href="DetailCartItem?qID={{sanpham.id}}">Lưu thay đổi</a>
-
-                                                </td>
                                         </tr>
                                  </div>
                                         <tr>
-                                        <td class="product-price" colspan="4">Tổng tiền :   </td>
+                                        <td class="product-price" colspan="2">Tổng tiền :   </td>
                                         <td class="product-price" colspan="2" id="tongtien">{{tongtien()}}</td>
                                         <input type="hidden" name = "tongtien" value="{{tongtien()}}"></input>
-                                        <td class="actions" > <input type="submit" value="Đặt hàng" /></td>
                                         </tr>
                               </table>
                          </div>
@@ -168,6 +156,17 @@
             </div>
         </div>
     </div>
+</div>
+<div style="width: 90%;margin:0cm 5cm 1cm 5cm;  ">
+<h2> Xác nhận mua hàng </h2>
+<form action="sentDonhang.html" method="post">
+    <label>Tên người mua hàng : </label><input type="text" name= "tenNgmua"></input><br/>
+    <label>Địa chỉ người mua hàng :</label> <input type="text" name = "dcNgmua"></input><br/>
+    <label>Email người mua hàng : </label> <input type="text" name  = "emailNgmua"></input><br/>
+    <label>Số điện thoại : </label> <input type="text" name ="sdtNgmua"></input><br/>
+    <label>Tổng tiền :</label> <input type="text" name = "tongtien" value = "{{tongtien()}}"></input><br/>
+    <input type="submit" value = "Submit"></input><br/>
+</form>
 </div>
 
 
