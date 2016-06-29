@@ -13,6 +13,15 @@
 	* 1212231 - Hoàng Viết Miền - %
 	* 1212278 - Lê Nguyễn Nhạc - %
 
+- [x] Sử dụng Git theo Feature Branch Workflow
+- [x] Sử dụng HTML 5 nâng cao: File API
+- [x] Xây dựng API cho phép đăng thông tin như cập nhật, xóa,...
+- [x]  Front-end Framework: Angular JS 1
+- [x] Lập trình AJAX với các callback success, error
+- [x] Có làm với MVC
+- [x]
+- [x]
+- [x]
 ### Wireframe:
 
 
