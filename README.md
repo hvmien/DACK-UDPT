@@ -24,5 +24,4 @@
 - [ ] Xem thông tin vé
 - [ ] 
 
-
 ### Link host website: [link ...!]()
