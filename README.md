@@ -21,9 +21,8 @@
 - [ ] Đăng nhập, đăng xuất, đăng kí
 - [ ] Chọn mua vé buffer
 - [ ] Thanh toán
+- [ ] Xem thông tin vé
 - [ ] 
-- [ ] 
-- [ ] 
-- [ ]
+
 
 ### Link host website: [link ...!](http://google.com)

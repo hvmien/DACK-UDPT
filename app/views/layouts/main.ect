@@ -5,35 +5,60 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap.tagsinput/0.4.2/bootstrap-tagsinput.css" />
+    <script src="//cdn.jsdelivr.net/bootstrap.tagsinput/0.4.2/bootstrap-tagsinput.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 
   </head>
     <body>
+      
         <nav class="navbar bg-faded navbar-fixed-top">
-          <a class="navbar-brand" >Chat Message</a>
-
+        <% if @session.isLoggedIn :%>
+          <a class="navbar-brand" href="/user/message" >Chat Message</a>
+        <% else : %>
+          <a class="navbar-brand" href="/" >Chat Message</a>
+        <% end%>
           <ul class="nav navbar-nav pull-xs-right" >
-          <% if @isLoggedIn :%>
 
+          <% if @session.isLoggedIn :%>
+
+          
            <li class="nav-item">
-              <a class="nav-link" href="/">Logout</a></li>
-            
+              <a class="nav-link" href="/logout">Logout <% @tilogin %></a></li>           
             <%else :%>
           
               <li class="nav-item active">
-              <a class="nav-link" href="login">Log In <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="user/login">Log In <span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="signup">Sign Up</a>
+              <a class="nav-link" href="/signup">Sign Up</a>
             </li>
            
             <%end%>
           </ul>
 
         </nav>
+   
 
         <% content %>
+
+        <%if @session.isLoggedIn :%>
+
+          <p style="text-align: center;"> da dang nhap thanh cong de hien thi tin nhan</p>
+          <!--<h2><% - @tilogin %></h2>-->
+
+        <%else :%>
+
+        <%end%>
 
     </body>
 </html>

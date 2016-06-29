@@ -6,14 +6,14 @@ var hash = require('../helpers/hash');
 var crypto = require('crypto');
 var bodyParser = require("body-parser");
 var express = require('express');
-var connectJade   = require('../middleware/index.js');
+var middleware   = require('../middleware/index.js');
 var User = mongoose.model('User');
 var ect = require('ect');
 
 
 module.exports = function(app){
 
-	console.log('login routes');
+	middleware(app);
 	app.get('/signup', function(req,res){
 		
 		res.render('../app/views/login/signup.ect');
@@ -62,10 +62,12 @@ module.exports = function(app){
 
 					console.log('4----');
 					//user created succesfully
-					req.isLoggedIn = true;
-					req.user = email;
+
+					req.session.singed = true;
+					req.session.user = email;
 					console.log('created user:%s',email);
-					return res.redirect('/');
+					return res.render('../app/views/login/signup.ect',{invalidsign:true});
+					//return res.redirect('/');
 				})
 			})
 		})
@@ -76,13 +78,13 @@ module.exports = function(app){
 	});
 
 	//LOGIN METHOD
-	app.get('/login',function(req,res){
+	app.get('/user/login',function(req,res){
 		console.log('get login');
 		
 		res.render('../app/views/login/loginform.ect');
 	})
 
-	app.post('/login',function(req,res,next){
+	app.post('/user/login',function(req,res,next){
 
 		var email = (req.param('email'));
 		var pass = (req.param('pass'));
@@ -107,12 +109,10 @@ module.exports = function(app){
 			}
 
 			console.log('---3 succesfully----')
-			isLoggedIn = true;
-			req.user = email;
-			res.render( '../app/views/index.ect', {isLoggedIn:true} );
-			//res.redirect('/');
-
-
+			req.session.isLoggedIn = true;
+			req.session.user = email;
+			req.session.name = 'NameUser';
+			res.redirect('/user/message');
 		})
 		function invalid(){
 			return res.render('../app/views/login/loginform.ect',{invalid:true});

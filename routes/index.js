@@ -1,8 +1,9 @@
 var errors = require('./errors');
 
 var login = require('./login.js');
+var logout = require('./logout.js');
 
-
+var message = require('./message.js');
 var express = require('express');
 /*
 var router = express.Router();
@@ -21,14 +22,17 @@ module.exports = function(app){
 	//homepage
 
 	app.get('/', function(req, res) {
-		isLoggedIn = true;
-	  res.render('../app/views/index.ect', { title: 'home'});
+		console.log(req.session.singed);
+	  res.render('../app/views/index.ect', { title: 'WEB CHAT'});
 
 	});
 
 	//login
 	login(app);
 
+	message(app);
+
+	logout(app);
 	//errors handlers
 	errors(app);
 }
