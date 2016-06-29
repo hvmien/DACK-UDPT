@@ -29,7 +29,6 @@ mongoose.connect('mongodb://localhost', function(err){
 
 	app.use(express.static(__dirname + '/app'));
 
-	
 
 	routes(app);
 
