@@ -12,10 +12,11 @@
 	*1212278 - Lê Nguyễn Nhạc - %
 
 ### Các chức năng đã thực hiện:
-- [] Đăng nhập, đăng xuất, đăng kí
-- [] Chọn mua vé buffer
-- [] Thanh toán
-- [] 
-- [] 
-- [] 
-- [] 
+- [ ] Đăng nhập, đăng xuất, đăng kí
+- [ ] Chọn mua vé buffer
+- [ ] Thanh toán
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ]
+### Link host website: [link ...!](http://google.com)
