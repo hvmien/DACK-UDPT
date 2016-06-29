@@ -3,21 +3,21 @@ var ungdungAngularjs = angular.module("ungdungAngularJS", []);
 ungdungAngularjs.controller("cartController",function($scope){
     $scope.listsanpham = [{
     id:1,
-    ten:"5cm tren giay",
-    gia:20000,
-    img : "5_centimet_tren_giay.jpg",
-    soluong : 1,},
+    ten:"Vé Buffer ngày 30/6/2016",
+    gia:150000,
+    img : "tick1.png",
+    soluong : 2,},
    {
     id:2,
-    ten:"1cm tren giay",
-    gia:10000,
-    img : "5_centimet_tren_giay.jpg",
+    ten:"Vé Buffer ngày 1/7/2016",
+    gia:120000,
+    img : "tick2.jpg",
     soluong : 1,},
     {
     id:3,
-    ten:"15cm tren giay",
-    gia:50000,
-    img : "5_centimet_tren_giay.jpg",
+    ten:"Vé Buffer ngày 2/7/2016",
+    gia:130000,
+    img : "tick3.jpg",
     soluong : 1,}];
 $scope.editedItem = {};
 

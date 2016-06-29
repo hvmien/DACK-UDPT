@@ -5,9 +5,9 @@ ungdungAngularjs.controller("DetailSPController",function($scope){
 
     $scope.sanpham={
     id:1,
-    ten:"5cm tren giay",
-    gia:20000,
-    img : "5_centimet_tren_giay.jpg",
-    mota : "Sach danh cho tre em "};
+    ten:"Vé Buffer ngày 30/6/2016",
+    gia:150000,
+    img : "tick1.png",
+    mota : "Thực đơn bao gồm : Gà hầm ngũ quả, Thịt kho tộ, Cơm chiên dương châu, Bánh Xèo miền Tây, Bò nướng lá lốt, Gà chiên bơ sốt Siro"};
 
 });
