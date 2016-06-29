@@ -28,8 +28,6 @@
    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
 </head>
 <body>
-<!--var ungdungAngularjs = angular.module("ungdungAngularJS", []);-->
-<script src="../controlers/HomePageController.js"></script>
     <div ng-app="ungdungAngularJS" ng-controller="HomepageController" >
 	<div ng-include="'pages/Header.html'">  </div>
     <div ng-include="'pages/MainMenu.html'">  </div>
@@ -97,10 +95,25 @@
     <div ng-include="'pages/Footer.html'">  </div>
 
     </div>
+<script>
+var ungdungAngularjs = angular.module("ungdungAngularJS", []);
+
+ungdungAngularjs.controller("HomepageController",function($scope){
+$scope.listsanpham=[{
+    id:1,
+    ten:"5cm tren giay",
+    gia:20000,
+    img : "5_centimet_tren_giay.jpg"},
+    {
+    id:2,
+    ten:"10cm tren giay",
+    gia:50000,
+    img : "5_centimet_tren_giay.jpg"}];
 
 
+});
       
-
+</script>
 
 <!-- Latest jQuery form server -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
